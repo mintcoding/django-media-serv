@@ -5,7 +5,6 @@ from django_media_serv import views
 from django.contrib.auth import logout, login
 from django.contrib.auth.views import LogoutView, LoginView
 from django.conf import settings
-from django.urls import path
 
 urlpatterns = [
         url(r'^media/', views.getMediaFile, name='getMediaFile'),
