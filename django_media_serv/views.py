@@ -21,6 +21,8 @@ def getMediaFile(request):
                   return HttpResponse(the_data, content_type="x-gis/x-shapefile")
               if extension == 'dbf':
                   return HttpResponse(the_data, content_type="text/plain")
+              if extension == 'prj':
+                  return HttpResponse(the_data, content_type="application/octet-stream")
 
               return HttpResponse(the_data, content_type=mimetypes.types_map['.'+str(extension)])
     else:
