@@ -30,7 +30,7 @@ def getMediaFile(request):
                   return HttpResponse(the_data, content_type="text/plain")
               if extension == 'prj':
                   return HttpResponse(the_data, content_type="application/octet-stream")
-              if len(extension) > 3:
+              if len(extension) > 2:
                  return HttpResponse(the_data, content_type=mimetypes.types_map['.'+str(extension)])
               else:
                  return HttpResponse("ERROR opening file", content_type="text/plain")
